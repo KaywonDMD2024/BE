@@ -1,64 +1,88 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ExtendedRouteObject } from "./types/ExtendedRouteObject";
+import React, { lazy, Suspense } from 'react';
+import { createBrowserRouter } from 'react-router-dom';
+import RootLayout from './components/RootLayout';
 
-/** @type {ExtendedRouteObject[]} */
+const ClickerGame = lazy(() => import('@/routes/ClickerGame/ClickerGame'));
+const Credit = lazy(() => import('@/routes/Credit'));
+const Curriculum = lazy(() => import('@/routes/Curriculum'));
+const GuestBook = lazy(() => import('@/routes/GuestBook'));
+const Menu = lazy(() => import('@/routes/Menu'));
+const Projects = lazy(() => import('@/routes/Projects'));
+const RollingPaper = lazy(() => import('@/routes/RollingPaper'));
+const Students = lazy(() => import('@/routes/Students'));
+
+
 const navigation = [
   {
-    text: "클리커 게임",
-    path: "/clickerGame",
-    lazy: () => import("@/routes/ClickerGame"),
+    text: '클리커 게임',
+    path: '/clickerGame',
+    lazy: ClickerGame,
   },
   {
-    text: "크레딧",
-    path: "/credit",
-    lazy: () => import("@/routes/Credit"),
+    text: '크레딧',
+    path: '/credit',
+    lazy: Credit,
   },
   {
-    text: "커리큘럼",
-    path: "/curriculum",
-    lazy: () => import("@/routes/curriculum"),
+    text: '커리큘럼',
+    path: '/curriculum',
+    lazy: Curriculum,
   },
   {
-    text: "방명록",
-    path: "/guestBook",
-    lazy: () => import("@/routes/GuestBook"),
+    text: '방명록',
+    path: '/guestBook',
+    lazy: GuestBook,
   },
   {
-    text: "메뉴",
-    path: "/menu",
-    lazy: () => import("@/routes/Menu"),
+    text: '메뉴',
+    path: '/menu',
+    lazy: Menu,
   },
   {
-    text: "프로젝트",
-    path: "/projects",
-    lazy: () => import("@/routes/Projects"),
+    text: '프로젝트',
+    path: '/projects',
+    lazy: Projects,
   },
   {
-    text: "롤링페이퍼",
-    path: "/rollingPaper",
-    lazy: () => import("@/routes/RollingPaper"),
+    text: '롤링페이퍼',
+    path: '/rollingPaper',
+    lazy: RollingPaper,
   },
   {
-    text: "학생",
-    path: "/students",
-    lazy: () => import("@/routes/Students"),
+    text: '학생',
+    path: '/students',
+    lazy: Students,
   },
 ];
 
-/** @type {RouteObject[]} */
+
+export const navigationItems = navigation.map((item) => ({
+  text: item.text,
+  path: item.path,
+}));
+
+
+const configRoutes = (navigation) =>
+  navigation.map((item) => ({
+    path: item.path,
+    element: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <item.lazy />
+      </Suspense>
+    ),
+  }));
+
 export const routes = [
   {
-    path: "/",
+    path: '/',
     element: <RootLayout />,
     children: configRoutes(navigation),
   },
 ];
+
 
 const router = createBrowserRouter(routes, {
   basename: import.meta.env.BASE_URL,
 });
 
 export default router;
-
-export const navigationItems = getNavigationItems(navigation);
