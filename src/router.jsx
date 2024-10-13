@@ -7,7 +7,6 @@ const Credit = lazy(() => import("@/routes/Credit/Credit.jsx"));
 const Curriculum = lazy(() => import("@/routes/Curriculum/Curriculum.jsx"));
 
 const GuestBook = lazy(() => import("@/routes/GuestBook/GuestBook.jsx"));
-const Menu = lazy(() => import("@/routes/Menu/Menu.jsx"));
 const Projects = lazy(() => import("@/routes/Projects/Projects.jsx"));
 const RollingPaper = lazy(
   () => import("@/routes/RollingPaper/RollingPaper.jsx")
@@ -34,11 +33,6 @@ const navigation = [
     text: "방명록",
     path: "/guestBook",
     lazy: GuestBook,
-  },
-  {
-    text: "메뉴",
-    path: "/menu",
-    lazy: Menu,
   },
   {
     text: "프로젝트",
