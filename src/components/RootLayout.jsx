@@ -1,20 +1,16 @@
-import React from 'react';
-import { Outlet, Link } from 'react-router-dom';
-import { navigationItems } from '../router';
+import React from "react";
+import { Outlet, Link } from "react-router-dom";
 
 const RootLayout = () => {
   return (
     <div>
       <header>
-        <nav>
-          <ul>
-            {navigationItems.map((item) => (
-              <li key={item.path}>
-                <Link to={item.path}>{item.text}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <img src="#" alt="Logo" />
+        <Link to="/projects">Projects</Link>
+        <Link to="/students">Students</Link>
+        <div className="NavBtn">
+          <img src="#" alt="Navigation Button" />
+        </div>
       </header>
       <main>
         <Outlet />
