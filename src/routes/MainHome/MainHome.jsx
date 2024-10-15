@@ -1,7 +1,7 @@
 import React from "react";
-import "./RootLayout.css";
+import "./MainHome.css";
 
-const Students = () => {
+const MainHome = () => {
   return (
     <div>
       <h1>클리커 게임</h1>
@@ -10,4 +10,4 @@ const Students = () => {
   );
 };
 
-export default Students;
+export default MainHome;

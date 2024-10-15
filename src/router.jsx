@@ -12,6 +12,7 @@ const RollingPaper = lazy(
   () => import("@/routes/RollingPaper/RollingPaper.jsx")
 );
 const Students = lazy(() => import("@/routes/Students/Students.jsx"));
+const MainHome = lazy(() => import("@/routes/MainHome/MainHome.jsx"));
 
 const navigation = [
   {
@@ -49,6 +50,11 @@ const navigation = [
     path: "/students",
     lazy: Students,
   },
+  {
+    text: "메인",
+    path: "/",
+    lazy: MainHome,
+  },
 ];
 
 export const navigationItems = navigation.map((item) => ({
@@ -61,7 +67,7 @@ const configRoutes = (navigation) =>
     path: item.path,
     element: (
       <Suspense fallback={<div>Loading...</div>}>
-        <item.lazy />
+        <MainHome />
       </Suspense>
     ),
   }));
