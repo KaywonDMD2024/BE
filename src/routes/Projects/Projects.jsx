@@ -1,11 +1,12 @@
 import React from "react";
+import ProjectHeader from "./components/ProjectHeader/ProjectHeader";
 
 const Projects = () => {
   return (
-    <div>
-      <h1>클리커 게임</h1>
-      <p>이곳에서 클리커 게임을 플레이하세요.</p>
-    </div>
+    <>
+      <ProjectHeader />
+      <div>하 힘들어 띠발</div>
+    </>
   );
 };
 
