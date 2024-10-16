@@ -67,7 +67,7 @@ const configRoutes = (navigation) =>
     path: item.path,
     element: (
       <Suspense fallback={<div>Loading...</div>}>
-        <MainHome />
+        <item.lazy />
       </Suspense>
     ),
   }));

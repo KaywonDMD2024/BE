@@ -1,5 +1,4 @@
 import React from "react";
-import "./RootLayout.css";
 
 const Students = () => {
   return (

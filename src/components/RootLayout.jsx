@@ -21,8 +21,6 @@ const RootLayout = () => {
         <Link to="/">
           <img src="#" alt="Logo" />
         </Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/students">Students</Link>
 
         {/* 메뉴 버튼 */}
         <div
