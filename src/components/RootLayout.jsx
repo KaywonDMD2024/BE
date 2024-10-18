@@ -21,6 +21,8 @@ const RootLayout = () => {
         <Link to="/">
           <img src="#" alt="Logo" />
         </Link>
+        <Link to="#">Projects</Link>
+        <Link to="#">Students</Link>
 
         {/* 메뉴 버튼 */}
         <div
@@ -69,11 +71,11 @@ const RootLayout = () => {
             <img src="#" alt="Logo" />
           </Link>
           <p>
-            16038 경기도 의왕시 계원대학로 66(내손동)
+            경기도 의왕시 계원대학로 66(내손동) 계원예술대학교 16038
             <br />
-            계원예술대학교 디자인관 5층 디지털미디어디자인과
+            kaywondaehangno(Naeson-Dong), Uiwang-Si, Gyeonggi-DO, Korea
           </p>
-          <p>ⓒ 2024. Delight Insight BE[biː] All Rights Reserved</p>
+          <p>ⓒ 2024. Delight Insight BE[biː] All Rights Reserved. </p>
         </div>
         <div className="RightFooter">
           <div className="LinkComponent">
