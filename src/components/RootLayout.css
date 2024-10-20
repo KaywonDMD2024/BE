@@ -68,6 +68,10 @@ footer {
    height: 328px;
 }
 /* RightFooter items */
+.LinkComponent img {
+   width: 33.57px;
+   height: 33.57px;
+}
 .Contact table {
    /* display: flex;
    flex-direction: column;

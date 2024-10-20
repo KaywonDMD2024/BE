@@ -85,13 +85,13 @@ const RootLayout = () => {
         <div className="RightFooter">
           <div className="LinkComponent">
             <Link to="/">
-              <img src="#" alt="Logo" />
+              <img src="../public/img/footer/insta.png" alt="Insta" />
             </Link>
             <Link to="/">
-              <img src="#" alt="Logo" />
+              <img src="../public/img/footer/youtube.png" alt="Youtube" />
             </Link>
             <Link to="/">
-              <img src="#" alt="Logo" />
+              <img src="../public/img/footer/blog.png" alt="Blog" />
             </Link>
           </div>
           <div className="Contact">
