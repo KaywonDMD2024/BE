@@ -1,10 +1,13 @@
 import React from "react";
+import imgCharacter1 from "./assets/character-1.svg";
+import imgCharacter2 from "./assets/character-2.svg";
+import imgCharacter3 from "./assets/character-3.svg";
 
 const ClickerGame = () => {
   return (
     <div>
-      <h1>클리커 게임</h1>
-      <p>이곳에서 클리커 게임을 플레이하세요.</p>
+      <h1>Click Me!</h1>
+      <img src={imgCharacter1} alt="캐릭터1" className="character-1" />
     </div>
   );
 };
