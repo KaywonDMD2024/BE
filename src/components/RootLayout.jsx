@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
 import "./RootLayout.css";
+import "../styles/pretendard.css";
 
 const RootLayout = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,6 +18,7 @@ const RootLayout = () => {
 
   return (
     <div>
+      {/* Header======================================== */}
       <header>
         <Link to="/">
           <img src="#" alt="Logo" />
@@ -62,11 +64,14 @@ const RootLayout = () => {
           </Link>
         </div>
       </header>
+
       <main>
         <Outlet />
       </main>
+
+      {/* Footer======================================== */}
       <footer>
-        <div>
+        <div className="LeftFooter">
           <Link to="/">
             <img src="#" alt="Logo" />
           </Link>
@@ -77,21 +82,35 @@ const RootLayout = () => {
           </p>
           <p>ⓒ 2024. Delight Insight BE[biː] All Rights Reserved. </p>
         </div>
+        
         <div className="RightFooter">
           <div className="LinkComponent">
             <Link to="/">
-              <img src="#" alt="Logo" />
+              <img src="../public/img/footer/insta.png" alt="Insta" />
             </Link>
             <Link to="/">
-              <img src="#" alt="Logo" />
+              <img src="../public/img/footer/youtube.png" alt="Youtube" />
             </Link>
             <Link to="/">
-              <img src="#" alt="Logo" />
+              <img src="../public/img/footer/blog.png" alt="Blog" />
             </Link>
           </div>
-          <p>Tell 031-424-7509</p>
-          <p>Fax 01899-5823</p>
-          <p>E-MAIL kaywon@kaywon.ac.kr</p>
+          <div className="Contact">
+            <table>
+              <tr>
+                <td className="ContactTitle">Tell</td>
+                <td>031-424-7509</td>
+              </tr>
+              <tr>
+                <td className="ContactTitle">Fax</td>
+                <td>01899-5823</td>
+              </tr>
+              <tr>
+                <td className="ContactTitle">E-MAIL</td>
+                <td>Kaywon@Kaywon.Ac.Kr</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </footer>
     </div>
