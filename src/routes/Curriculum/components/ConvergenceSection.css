@@ -1,0 +1,65 @@
+.convergence-section {
+   background: black;
+   text-align: center;
+   color: white;
+}
+
+.circle-container {
+   position: relative;
+   width: 400px;
+   height: 400px;
+   margin: 0 auto;
+}
+
+.circle {
+   position: absolute;
+   width: 150px;
+   height: 150px;
+   border: 1px solid white;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   transition: background-color 0.3s, transform 0.3s;
+}
+
+.circle p {
+   margin: 0;
+   color: white;
+}
+
+.circle:hover {
+   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.design {
+   top: 20px;
+   left: 125px;
+}
+
+.media {
+   top: 125px;
+   left: 20px;
+}
+
+.technology {
+   top: 125px;
+   left: 230px;
+}
+
+.convergence-center {
+   position: absolute;
+   top: 120px;
+   left: 140px;
+   font-size: 1.2em;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.active {
+   background-color: rgba(255, 255, 255, 0.4);
+   transform: scale(1.1);
+}
