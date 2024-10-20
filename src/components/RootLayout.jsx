@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
 import "./RootLayout.css";
+import "../styles/pretendard.css";
 
 const RootLayout = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -97,16 +98,16 @@ const RootLayout = () => {
           <div className="Contact">
             <table>
               <tr>
-                <td>Tell</td>
+                <td className="ContactTitle">Tell</td>
                 <td>031-424-7509</td>
               </tr>
               <tr>
-                <td>Fax</td>
+                <td className="ContactTitle">Fax</td>
                 <td>01899-5823</td>
               </tr>
               <tr>
-                <td>E-MAIL</td>
-                <td>kaywon@kaywon.ac.kr</td>
+                <td className="ContactTitle">E-MAIL</td>
+                <td>Kaywon@Kaywon.Ac.Kr</td>
               </tr>
             </table>
           </div>
