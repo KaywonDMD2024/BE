@@ -17,6 +17,7 @@ const RootLayout = () => {
 
   return (
     <div>
+      {/* Header======================================== */}
       <header>
         <Link to="/">
           <img src="#" alt="Logo" />
@@ -62,11 +63,14 @@ const RootLayout = () => {
           </Link>
         </div>
       </header>
+
       <main>
         <Outlet />
       </main>
+
+      {/* Footer======================================== */}
       <footer>
-        <div>
+        <div className="LeftFooter">
           <Link to="/">
             <img src="#" alt="Logo" />
           </Link>
@@ -77,6 +81,7 @@ const RootLayout = () => {
           </p>
           <p>ⓒ 2024. Delight Insight BE[biː] All Rights Reserved. </p>
         </div>
+        
         <div className="RightFooter">
           <div className="LinkComponent">
             <Link to="/">
@@ -89,9 +94,22 @@ const RootLayout = () => {
               <img src="#" alt="Logo" />
             </Link>
           </div>
-          <p>Tell 031-424-7509</p>
-          <p>Fax 01899-5823</p>
-          <p>E-MAIL kaywon@kaywon.ac.kr</p>
+          <div className="Contact">
+            <table>
+              <tr>
+                <td>Tell</td>
+                <td>031-424-7509</td>
+              </tr>
+              <tr>
+                <td>Fax</td>
+                <td>01899-5823</td>
+              </tr>
+              <tr>
+                <td>E-MAIL</td>
+                <td>kaywon@kaywon.ac.kr</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </footer>
     </div>
