@@ -8,6 +8,21 @@ header {
    /* width: 100%; */
    height: 116px;
    margin: 0 100px;
+   font-family: 'Pretendard-medium', sans-serif;
+   font-size: 24px;
+   line-height: 28px;
+}
+.rightMenu {
+   display: flex;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+}
+/* rightMenu items */
+.menuLink {
+   margin-right: 118px;
+   text-decoration: none;
+   color: #000;
 }
 .hamburger-menu {
    display: flex;
@@ -70,8 +85,7 @@ footer {
    font-family: 'Pretendard-regular', sans-serif;
    font-size: 20px;
    line-height: 28px;
-   color: #000;
-   border-top: solid 1px #000;
+
 }
 /* RightFooter items */
 .LinkComponent img {
