@@ -20,48 +20,52 @@ const RootLayout = () => {
     <div>
       {/* Header======================================== */}
       <header>
-        <Link to="/">
-          <img src="#" alt="Logo" />
-        </Link>
-        <Link to="#">Projects</Link>
-        <Link to="#">Students</Link>
-
-        {/* 메뉴 버튼 */}
-        <div
-          className={`hamburger-menu ${menuOpen ? "active" : ""}`}
-          onClick={handleMenuClick}
-        >
-          <div className="hamburger-line line1"></div>
-          <div className="hamburger-line line2"></div>
-          <div className="hamburger-line line3"></div>
-        </div>
-
-        {/* 메뉴 목록 */}
-        <div className={`dropdown-menu ${menuOpen ? "open" : ""}`}>
-          <Link to="/Curriculum">
-            <span className="hamburger-number">01</span>
-            <span className="hamburger-title">Curriculum</span>
-          </Link>
-          <Link to="/Projects">
-            <span className="hamburger-number">02</span>
-            <span className="hamburger-title">Project</span>
-          </Link>
-          <Link to="/Students">
-            <span className="hamburger-number">03</span>
-            <span className="hamburger-title">Students</span>
-          </Link>
+        <div className="Logo">
           <Link to="/">
-            <span className="hamburger-number">04</span>
-            <span className="hamburger-title">Contents</span>
+            <img src="#" alt="Logo" />
           </Link>
-          <Link to="/Guestbook">
-            <span className="hamburger-number">05</span>
-            <span className="hamburger-title">Guestbook</span>
-          </Link>
-          <Link to="/about">
-            <span className="hamburger-number">06</span>
-            <span className="hamburger-title">Credit</span>
-          </Link>
+        </div>
+        <div className="rightMenu">
+          <Link className="menuLink" to="#">Projects</Link>
+          <Link className="menuLink" to="#">Students</Link>
+
+          {/* 메뉴 버튼 */}
+          <div
+            className={`hamburger-menu ${menuOpen ? "active" : ""}`}
+            onClick={handleMenuClick}
+          >
+            <div className="hamburger-line line1"></div>
+            <div className="hamburger-line line2"></div>
+            <div className="hamburger-line line3"></div>
+          </div>
+
+          {/* 메뉴 목록 */}
+          <div className={`dropdown-menu ${menuOpen ? "open" : ""}`}>
+            <Link to="/Curriculum">
+              <span className="hamburger-number">01</span>
+              <span className="hamburger-title">Curriculum</span>
+            </Link>
+            <Link to="/Projects">
+              <span className="hamburger-number">02</span>
+              <span className="hamburger-title">Project</span>
+            </Link>
+            <Link to="/Students">
+              <span className="hamburger-number">03</span>
+              <span className="hamburger-title">Students</span>
+            </Link>
+            <Link to="/">
+              <span className="hamburger-number">04</span>
+              <span className="hamburger-title">Contents</span>
+            </Link>
+            <Link to="/Guestbook">
+              <span className="hamburger-number">05</span>
+              <span className="hamburger-title">Guestbook</span>
+            </Link>
+            <Link to="/about">
+              <span className="hamburger-number">06</span>
+              <span className="hamburger-title">Credit</span>
+            </Link>
+          </div>
         </div>
       </header>
 
