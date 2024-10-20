@@ -1,6 +1,6 @@
 .convergence-section {
-   background: #DBFF00;
-   text-align: center;
+   background-image: url("../assets/curribg.svg");
+   background-size: cover;
    color: #000;
 }
 
@@ -31,6 +31,7 @@
 .circle:hover {
    background-color: black;
    color: white;
+   border: 1px solid #DBFF00;
 
    p {
       color: white;
@@ -50,15 +51,4 @@
 .technology {
    top: 125px;
    left: 185px;
-}
-
-.convergence-center {
-   position: absolute;
-   top: 120px;
-   left: 15 0px;
-   font-size: 1.2em;
-   color: white;
-   display: flex;
-   justify-content: center;
-   align-items: center;
 }
