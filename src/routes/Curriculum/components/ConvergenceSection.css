@@ -1,7 +1,7 @@
 .convergence-section {
-   background: black;
+   background: #DBFF00;
    text-align: center;
-   color: white;
+   color: #000;
 }
 
 .circle-container {
@@ -15,51 +15,50 @@
    position: absolute;
    width: 150px;
    height: 150px;
-   border: 1px solid white;
+   border: 1px solid black;
    border-radius: 50%;
    display: flex;
    justify-content: center;
    align-items: center;
    cursor: pointer;
-   transition: background-color 0.3s, transform 0.3s;
 }
 
 .circle p {
    margin: 0;
-   color: white;
+   color: black;
 }
 
 .circle:hover {
-   background-color: rgba(255, 255, 255, 0.2);
+   background-color: black;
+   color: white;
+
+   p {
+      color: white;
+   }
 }
 
 .design {
-   top: 20px;
+   top: 25px;
    left: 125px;
 }
 
 .media {
    top: 125px;
-   left: 20px;
+   left: 65px;
 }
 
 .technology {
    top: 125px;
-   left: 230px;
+   left: 185px;
 }
 
 .convergence-center {
    position: absolute;
    top: 120px;
-   left: 140px;
+   left: 15 0px;
    font-size: 1.2em;
    color: white;
    display: flex;
    justify-content: center;
    align-items: center;
-}
-
-.active {
-   background-color: rgba(255, 255, 255, 0.4);
-   transform: scale(1.1);
 }

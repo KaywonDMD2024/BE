@@ -1,6 +1,7 @@
 import React from "react";
 import "./Curriculum.css";
 import ConvergenceSection from "./components/ConvergenceSection";
+import roadmap from "./assets/roadmap.svg";
 
 const Curriculum = () => {
   return (
@@ -16,6 +17,10 @@ const Curriculum = () => {
         <p>Scroll Down</p>
       </section>
       <ConvergenceSection />
+
+      <div className="roadmapSection">
+        <img src={roadmap} alt="로드맵" className="roadmap" />
+      </div>
     </div>
   );
 };
