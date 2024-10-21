@@ -1,54 +1,95 @@
+/* 기본 스타일 */
 .convergence-section {
    background-image: url("../assets/curribg.svg");
    background-size: cover;
+   height: 1150px;
    color: #000;
+   margin-top: 350px;
+   margin-bottom: 200px;
+}
+
+.section-container {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   height: 1000px;
+}
+
+.text-section {
+   margin-top: 280px;
+   margin-bottom: 200px;
+   margin-left: 100px;
+}
+
+.text-section h2 {
+   color: #373737;
+   font-size: 6rem;
+   font-weight: 600;
+   line-height: 174%;
+   margin-bottom: -10px;
+}
+
+.text-section p {
+   font-size: 2rem;
+   font-weight: 600;
+   color: #373737;
+   line-height: 140%;
 }
 
 .circle-container {
+   width: 90vw;
+   height: 90vw;
+   max-width: 500px;
+   max-height: 500px;
+   border: 2px solid #000;
+   border-radius: 50%;
    position: relative;
-   width: 400px;
-   height: 400px;
-   margin: 0 auto;
+   margin-top: 330px;
+   margin-left: 200px;
 }
 
 .circle {
    position: absolute;
-   width: 150px;
-   height: 150px;
+   width: 200px;
+   height: 200px;
    border: 1px solid black;
    border-radius: 50%;
    display: flex;
    justify-content: center;
    align-items: center;
    cursor: pointer;
-}
-
-.circle p {
-   margin: 0;
-   color: black;
+   transition: background-color 0.3s, color 0.3s;
 }
 
 .circle:hover {
    background-color: black;
    color: white;
    border: 1px solid #DBFF00;
-
-   p {
-      color: white;
-   }
 }
 
 .design {
-   top: 25px;
-   left: 125px;
+   top: 35%;
+   left: 50%;
+   transform: translate(-50%, -50%);
 }
 
 .media {
-   top: 125px;
-   left: 65px;
+   top: 60%;
+   left: 35%;
+   transform: translate(-50%, -50%);
 }
 
 .technology {
-   top: 125px;
-   left: 185px;
+   top: 60%;
+   left: 65%;
+   transform: translate(-50%, -50%);
+}
+
+.about-section {
+   margin-left: 100px;
+   display: flex;
+}
+
+.about-section p {
+   font-size: 24px;
+   padding-right: 200px;
 }
