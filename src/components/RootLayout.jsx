@@ -127,7 +127,7 @@ const RootLayout = () => {
             <br />
             kaywondaehangno(Naeson-Dong), Uiwang-Si, Gyeonggi-DO, Korea
           </p>
-          <p>ⓒ 2024. Delight Insight BE[biː] All Rights Reserved. </p>
+          <p className="copyright">ⓒ 2024. Delight Insight BE[biː] All Rights Reserved. </p>
         </div>
 
         <div className="RightFooter">
