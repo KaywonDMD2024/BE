@@ -3,49 +3,50 @@
    margin: 0;
 }
 
-/* Header=============================================================================== */
+/* Header =============================================================================== */
 header {
    display: flex;
    align-items: center;
-   /* justify-content: space-between; */
    padding: 0 100px;
-
    width: 100%;
    height: 116px;
    font-family: 'Pretendard-medium', sans-serif;
    font-weight: 500;
    font-size: 24px;
    line-height: 28px;
-
    position: fixed;
    top: 0;
+   z-index: 20;
+   /* 헤더가 드롭다운 메뉴 위에 있도록 설정 */
 }
 
 .Logo {
    width: 192px;
    height: 63px;
-
-   left: 0;
 }
+
 .rightMenu {
    display: flex;
-
    position: fixed;
    right: 100px;
 }
+
 .menuLink {
    margin-right: 118px;
    text-decoration: none;
    color: #000;
 }
+
 .hamburger-menu {
    display: flex;
    flex-direction: column;
    cursor: pointer;
    width: 30px;
    gap: 5px;
-   z-index: 11;
+   z-index: 21;
+   /* 햄버거 메뉴가 다른 요소 위에 있도록 설정 */
 }
+
 /* Styling for each line in the hamburger menu */
 .hamburger-line {
    width: 100%;
@@ -53,82 +54,82 @@ header {
    background-color: black;
    transition: all 0.3s ease;
 }
+
 /* Active state for the hamburger menu */
 .hamburger-menu.active .line1 {
    transform: rotate(45deg) translate(5.5px, 5.5px);
 }
+
 .hamburger-menu.active .line2 {
    opacity: 0;
 }
+
 .hamburger-menu.active .line3 {
    transform: rotate(-45deg) translate(5.5px, -5.5px);
 }
+
 /* Dropdown menu styles */
 .dropdown-menu {
    display: none;
-   /* flex-direction: column; */
-   text-align: left;
-   align-items: center;
-   justify-content: center;
-   width: 100%;
-   height: 100%;
-   position: absolute;
+   z-index: 10;
+   position: fixed;
+   /* 고정 위치로 변경 */
    top: 0;
    left: 0;
-   background-color: white;
-   padding: 10px;
-   /* margin-left: 100px; */
-   z-index: 10;
-
+   width: 100vw;
+   /* 화면 너비 */
+   height: 100vh;
+   /* 화면 높이 */
+   background-color: #fff;
+   align-items: center;
+   justify-content: center;
    font-family: 'Pretendard-black', sans-serif;
    font-weight: 900;
    font-size: 60px;
    line-height: 140px;
+   overflow: hidden;
+   /* 내용이 넘치지 않도록 설정 */
 }
+
 .hamburger-menu.active+.dropdown-menu {
    display: flex;
+   /* 활성화 시 드롭다운 표시 */
 }
+
 /* Dropdown menu items */
 .dropdown-menu a {
    text-decoration: none;
    color: black;
    padding: 8px 12px;
 }
+
 .dropdown-menu a:hover {
    color: #DBFF00;
 }
+
 .hamList {
-   width: 1920px;
-   height: 100%;
-   position: absolute;
-   top: 0;
-   left: 0;
-   background-color: #fff;
-}
-.leftList {
-   margin-right: 170px;
-}
-.leftList, .rightList {
    display: flex;
    flex-direction: column;
+   /* 세로 정렬 */
+   align-items: center;
+   /* 중앙 정렬 */
+   width: 100%;
+   /* 너비 100% */
 }
 
-
-/* Footer=============================================================================== */
+/* Footer =============================================================================== */
 main {
-   margin: 116px 100px 0 100px;
-
+   margin: 116px 100px 0;
+   /* 헤더 높이만큼 여백 추가 */
+   height: 900px;
    /* 확인용 임시 높이 지정 */
-   height: 900px; 
 }
 
-/* Footer=============================================================================== */
+/* Footer =============================================================================== */
 footer {
    display: flex;
    align-items: center;
    justify-content: space-between;
-
-   /* width: 100%; */
    height: 328px;
    margin: 0 100px;
    font-family: 'Pretendard-regular', sans-serif;
@@ -136,20 +137,23 @@ footer {
    font-size: 20px;
    line-height: 28px;
    border-top: solid 1px #000;
-
 }
+
 .LeftFooter {
    width: auto;
    height: 195px;
 }
+
 .address {
    margin: 30px 0 18px 0;
 }
+
 .RightFooter {
    width: auto;
    height: 139px;
    margin-top: 56px;
 }
+
 /* RightFooter items */
 .LinkComponent img {
    width: 33.57px;
@@ -157,9 +161,11 @@ footer {
    margin-right: 24px;
    margin-bottom: 21px;
 }
+
 .Contact table td {
    padding: 0;
 }
+
 .ContactTitle {
    width: 117px;
 }
