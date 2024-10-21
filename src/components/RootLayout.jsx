@@ -16,6 +16,23 @@ const RootLayout = () => {
     setMenuOpen(false);
   }, [location]);
 
+  // Apply and remove overflow:hidden when menu is opened/closed
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden'; // Apply to html as well
+    } else {
+      document.body.style.overflow = 'auto';
+      document.documentElement.style.overflow = 'auto'; // Reset overflow
+    }
+
+    // Cleanup to reset the overflow when the component is unmounted
+    return () => {
+      document.body.style.overflow = 'auto';
+      document.documentElement.style.overflow = 'auto';
+    };
+  }, [menuOpen]);
+  
   return (
     <div>
       {/* Header======================================== */}
@@ -25,47 +42,45 @@ const RootLayout = () => {
             <img src="#" alt="Logo" />
           </Link>
         </div>
-        <div className="rightMenu">
-          <Link className="menuLink" to="#">Projects</Link>
-          <Link className="menuLink" to="#">Students</Link>
+        <Link className="menuLink" to="/Projects">Projects</Link>
+        <Link className="menuLink" to="/Students">Students</Link>
 
-          {/* 메뉴 버튼 */}
-          <div
-            className={`hamburger-menu ${menuOpen ? "active" : ""}`}
-            onClick={handleMenuClick}
-          >
-            <div className="hamburger-line line1"></div>
-            <div className="hamburger-line line2"></div>
-            <div className="hamburger-line line3"></div>
-          </div>
+        {/* 메뉴 버튼 */}
+        <div
+          className={`hamburger-menu ${menuOpen ? "active" : ""}`}
+          onClick={handleMenuClick}
+        >
+          <div className="hamburger-line line1"></div>
+          <div className="hamburger-line line2"></div>
+          <div className="hamburger-line line3"></div>
+        </div>
 
-          {/* 메뉴 목록 */}
-          <div className={`dropdown-menu ${menuOpen ? "open" : ""}`}>
-            <Link to="/Curriculum">
-              <span className="hamburger-number">01</span>
-              <span className="hamburger-title">Curriculum</span>
-            </Link>
-            <Link to="/Projects">
-              <span className="hamburger-number">02</span>
-              <span className="hamburger-title">Project</span>
-            </Link>
-            <Link to="/Students">
-              <span className="hamburger-number">03</span>
-              <span className="hamburger-title">Students</span>
-            </Link>
-            <Link to="/">
-              <span className="hamburger-number">04</span>
-              <span className="hamburger-title">Contents</span>
-            </Link>
-            <Link to="/Guestbook">
-              <span className="hamburger-number">05</span>
-              <span className="hamburger-title">Guestbook</span>
-            </Link>
-            <Link to="/about">
-              <span className="hamburger-number">06</span>
-              <span className="hamburger-title">Credit</span>
-            </Link>
-          </div>
+        {/* 메뉴 목록 */}
+        <div className={`dropdown-menu ${menuOpen ? "open" : ""}`}>
+          <Link to="/Curriculum">
+            <span className="hamburger-number">01</span>
+            <span className="hamburger-title">Curriculum</span>
+          </Link>
+          <Link to="/Projects">
+            <span className="hamburger-number">02</span>
+            <span className="hamburger-title">Project</span>
+          </Link>
+          <Link to="/Students">
+            <span className="hamburger-number">03</span>
+            <span className="hamburger-title">Students</span>
+          </Link>
+          <Link to="/">
+            <span className="hamburger-number">04</span>
+            <span className="hamburger-title">Contents</span>
+          </Link>
+          <Link to="/Guestbook">
+            <span className="hamburger-number">05</span>
+            <span className="hamburger-title">Guestbook</span>
+          </Link>
+          <Link to="/about">
+            <span className="hamburger-number">06</span>
+            <span className="hamburger-title">Credit</span>
+          </Link>
         </div>
       </header>
 
@@ -90,13 +105,13 @@ const RootLayout = () => {
         <div className="RightFooter">
           <div className="LinkComponent">
             <Link to="/">
-              <img src="../public/img/footer/insta.png" alt="Insta" />
+              <img src="/img/footer/insta.png" alt="Insta" />
             </Link>
             <Link to="/">
-              <img src="../public/img/footer/youtube.png" alt="Youtube" />
+              <img src="/img/footer/youtube.png" alt="Youtube" />
             </Link>
             <Link to="/">
-              <img src="../public/img/footer/blog.png" alt="Blog" />
+              <img src="/img/footer/blog.png" alt="Blog" />
             </Link>
           </div>
           <div className="Contact">
