@@ -3,16 +3,15 @@ import { Link } from "react-router-dom";
 import ProfileImg from "../assets/Ass.jpeg";
 import "./ProfileComponent.css";
 
-const profileComponent = () => {
+const ProfileComponent = ({ name, imageSrc }) => {
   return (
-    <div>
+    <div className="profile-item">
       <Link to="/">
-        <img src={ProfileImg} alt="김재림" className="profileImg" />
+        <img src={ProfileImg} alt={name} />
+        <p>{name}</p>
       </Link>
-      <span>박정우</span>
-      <span>CATCHD | DESIGNER</span>
     </div>
   );
 };
 
-export default profileComponent;
+export default ProfileComponent;
