@@ -189,3 +189,43 @@ body {
 .ContactTitle {
    width: 6.09vw; /* 117px -> 약 6.09vw */
 }
+
+
+/* Media Queris for Responsive Design */
+/* 화면의 너비가 393px 이상이고 1920px 이하인 경우 */
+@media screen and (min-width: 393px) and (max-width: 1920px) {
+   .main_header {
+       padding: 0 8.569vw; /* 100px -> 8.569vw */
+       height: 13.35vh; /* 116px -> 13.35vh */
+       font-size: 1.5em; /* 24px -> 1.5em */
+       line-height: 1.75em; /* 28px -> 1.75em */
+   }
+
+   .main_footer {
+       margin: 0 8.569vw; /* 100px -> 8.569vw */
+   }
+}
+
+/* Adjustments for Mobile */
+/* 화면의 너비가 393px 이하인 경우 */
+@media screen and (max-width: 393px) {
+   .main_header {
+       padding: 0 4.5vw; /* 24px -> 모바일용 패딩 */
+       height: 10vh; /* 90px -> 모바일용 높이 */
+   }
+
+   .main_footer {
+       margin: 0 4.5vw; /* 24px -> 모바일용 패딩 */
+       height: 10vh; /* 132px -> 모바일용 높이 */
+   }
+
+   /* 햄버거 메뉴와 드롭다운 메뉴 숨기기 */
+   .hamburger-menu, .dropdown-menu {
+      display: none;
+   }
+
+   /* 푸터의 주소와 저작권 숨기기 */
+   .address, .copyright {
+      display: none; /* 주소와 저작권 정보 숨김 */
+   }
+}
