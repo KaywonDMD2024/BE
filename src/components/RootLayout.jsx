@@ -5,6 +5,7 @@ import "../styles/pretendard.css";
 
 const RootLayout = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const[submenuOpen, setSubmenuOpen] = useState(false);
   const location = useLocation(); // Hook to get the current location
 
   const handleMenuClick = () => {
@@ -14,6 +15,7 @@ const RootLayout = () => {
   // Close the menu automatically when the route changes
   useEffect(() => {
     setMenuOpen(false);
+    setSubmenuOpen(false);
   }, [location]);
 
   // Apply and remove overflow:hidden when menu is opened/closed
@@ -36,7 +38,7 @@ const RootLayout = () => {
   return (
     <div>
       {/* Header======================================== */}
-      <header>
+      <header className="main_header">
         <div className="Logo">
           <Link to="/">
             <img src="/img/Logo.svg" alt="Logo" />
@@ -79,9 +81,22 @@ const RootLayout = () => {
                 </Link>
               </div>
               <div className="rightList">
-                <Link to="/">
+                <Link
+                  className="contentsLink"
+                  to="/"
+                  onMouseEnter={() => setSubmenuOpen(true)}
+                  onMouseLeave={() => setSubmenuOpen(false)}
+                >
                   <span className="hamburger-number">04 </span>
                   <span className="hamburger-title">Contents</span>
+
+                  {/* sub menu rendering */}
+                  {submenuOpen && (
+                    <div className="contentsSub">
+                      <Link to="/RollingPaper">Rolling in the B</Link>
+                      <Link to="/ClickerGame">Clicker Game</Link>
+                    </div>
+                  )}
                 </Link>
                 <Link to="/Guestbook">
                   <span className="hamburger-number">05 </span>
@@ -97,12 +112,12 @@ const RootLayout = () => {
         </div>
       </header>
 
-      <main>
+      <main className="main_main">
         <Outlet />
       </main>
 
       {/* Footer======================================== */}
-      <footer>
+      <footer className="main_footer">
         <div className="LeftFooter">
           <Link to="/">
             <img src="/img/footerLogo.svg" alt="Logo" />

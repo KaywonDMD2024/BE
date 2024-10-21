@@ -4,7 +4,7 @@
 }
 
 /* Header =============================================================================== */
-header {
+.main_header {
    display: flex;
    align-items: center;
    padding: 0 100px;
@@ -14,6 +14,7 @@ header {
    font-weight: 500;
    font-size: 24px;
    line-height: 28px;
+   background-color: #E6E6E6;
    position: fixed;
    top: 0;
    z-index: 20;
@@ -109,24 +110,39 @@ header {
 
 .hamList {
    display: flex;
-   flex-direction: column;
+   /* flex-direction: column; */
    /* 세로 정렬 */
+   justify-content: center;
    align-items: center;
    /* 중앙 정렬 */
    width: 100%;
    /* 너비 100% */
 }
 
-/* Footer =============================================================================== */
-main {
-   margin: 116px 100px 0;
+.leftList, .rightList {
+   display: flex;
+   flex-direction: column;
+}
+.leftList {
+   margin-right: 250px;
+}
+
+.contentsSub {
+   display: flex;
+   color: #000;
+   font-family: 'Pretendard-medium', sans-serif;
+   font-weight: 500;
+   font-size: 40px;
+}
+
+/* Main =============================================================================== */
+.main_main {
+   margin: 116px 0;
    /* 헤더 높이만큼 여백 추가 */
-   height: 900px;
-   /* 확인용 임시 높이 지정 */
 }
 
 /* Footer =============================================================================== */
-footer {
+.main_footer {
    display: flex;
    align-items: center;
    justify-content: space-between;
