@@ -1,0 +1,65 @@
+body {
+   background-color: #E7E7E7;
+   margin: 0;
+   padding: 0;
+}
+
+.banner-section {
+   background-image: url("./assets/dmdbg.svg");
+   background-size: 70%;
+   background-repeat: no-repeat;
+   background-position: center;
+   margin-top: 220px;
+   margin-bottom: 131px;
+   text-align: center;
+   height: 600px;
+}
+
+.banner-section h2 {
+   padding-top: 200px;
+   font-size: 48px;
+   margin-bottom: 45px;
+}
+
+.banner-section p {
+   font-size: 20px;
+   line-height: 28px;
+}
+
+.scrolldown-btn {
+   cursor: pointer;
+   margin-top: 260px;
+}
+
+.banner-explanation {
+   margin-bottom: 200px;
+}
+
+.roadmapSection {
+   width: 100%;
+   text-align: center;
+   margin-bottom: 160px;
+}
+
+.roadmap {
+   width: 70%;
+   margin: 0 auto;
+}
+
+@keyframes scrollAnimation {
+   0% {
+      transform: translateY(0);
+   }
+
+   50% {
+      transform: translateY(10px);
+   }
+
+   100% {
+      transform: translateY(0);
+   }
+}
+
+.scrolldown-btn img {
+   animation: scrollAnimation 1s ease-in-out infinite;
+}
