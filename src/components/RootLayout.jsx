@@ -59,30 +59,34 @@ const RootLayout = () => {
 
           {/* 메뉴 목록 */}
           <div className={`dropdown-menu ${menuOpen ? "open" : ""}`}>
-            <Link to="/Curriculum">
-              <span className="hamburger-number">01</span>
-              <span className="hamburger-title">Curriculum</span>
-            </Link>
-            <Link to="/Projects">
-              <span className="hamburger-number">02</span>
-              <span className="hamburger-title">Project</span>
-            </Link>
-            <Link to="/Students">
-              <span className="hamburger-number">03</span>
-              <span className="hamburger-title">Students</span>
-            </Link>
-            <Link to="/">
-              <span className="hamburger-number">04</span>
-              <span className="hamburger-title">Contents</span>
-            </Link>
-            <Link to="/Guestbook">
-              <span className="hamburger-number">05</span>
-              <span className="hamburger-title">Guestbook</span>
-            </Link>
-            <Link to="/about">
-              <span className="hamburger-number">06</span>
-              <span className="hamburger-title">Credit</span>
-            </Link>
+            <div className="leftList">
+              <Link to="/Curriculum">
+                <span className="hamburger-number">01</span>
+                <span className="hamburger-title">Curriculum</span>
+              </Link>
+              <Link to="/Projects">
+                <span className="hamburger-number">02</span>
+                <span className="hamburger-title">Project</span>
+              </Link>
+              <Link to="/Students">
+                <span className="hamburger-number">03</span>
+                <span className="hamburger-title">Students</span>
+              </Link>
+            </div>
+            <div className="rightList">
+              <Link to="/">
+                <span className="hamburger-number">04</span>
+                <span className="hamburger-title">Contents</span>
+              </Link>
+              <Link to="/Guestbook">
+                <span className="hamburger-number">05</span>
+                <span className="hamburger-title">Guestbook</span>
+              </Link>
+              <Link to="/about">
+                <span className="hamburger-number">06</span>
+                <span className="hamburger-title">Credit</span>
+              </Link>
+            </div>
           </div>
         </div>
       </header>
