@@ -39,48 +39,51 @@ const RootLayout = () => {
       <header>
         <div className="Logo">
           <Link to="/">
-            <img src="#" alt="Logo" />
+            <img src="/img/Logo.svg" alt="Logo" />
           </Link>
         </div>
-        <Link className="menuLink" to="/Projects">Projects</Link>
-        <Link className="menuLink" to="/Students">Students</Link>
 
-        {/* 메뉴 버튼 */}
-        <div
-          className={`hamburger-menu ${menuOpen ? "active" : ""}`}
-          onClick={handleMenuClick}
-        >
-          <div className="hamburger-line line1"></div>
-          <div className="hamburger-line line2"></div>
-          <div className="hamburger-line line3"></div>
-        </div>
+        <div className="rightMenu">
+          <Link className="menuLink" to="/Projects">Projects</Link>
+          <Link className="menuLink" to="/Students">Students</Link>
 
-        {/* 메뉴 목록 */}
-        <div className={`dropdown-menu ${menuOpen ? "open" : ""}`}>
-          <Link to="/Curriculum">
-            <span className="hamburger-number">01</span>
-            <span className="hamburger-title">Curriculum</span>
-          </Link>
-          <Link to="/Projects">
-            <span className="hamburger-number">02</span>
-            <span className="hamburger-title">Project</span>
-          </Link>
-          <Link to="/Students">
-            <span className="hamburger-number">03</span>
-            <span className="hamburger-title">Students</span>
-          </Link>
-          <Link to="/">
-            <span className="hamburger-number">04</span>
-            <span className="hamburger-title">Contents</span>
-          </Link>
-          <Link to="/Guestbook">
-            <span className="hamburger-number">05</span>
-            <span className="hamburger-title">Guestbook</span>
-          </Link>
-          <Link to="/about">
-            <span className="hamburger-number">06</span>
-            <span className="hamburger-title">Credit</span>
-          </Link>
+          {/* 메뉴 버튼 */}
+          <div
+            className={`hamburger-menu ${menuOpen ? "active" : ""}`}
+            onClick={handleMenuClick}
+          >
+            <div className="hamburger-line line1"></div>
+            <div className="hamburger-line line2"></div>
+            <div className="hamburger-line line3"></div>
+          </div>
+
+          {/* 메뉴 목록 */}
+          <div className={`dropdown-menu ${menuOpen ? "open" : ""}`}>
+            <Link to="/Curriculum">
+              <span className="hamburger-number">01</span>
+              <span className="hamburger-title">Curriculum</span>
+            </Link>
+            <Link to="/Projects">
+              <span className="hamburger-number">02</span>
+              <span className="hamburger-title">Project</span>
+            </Link>
+            <Link to="/Students">
+              <span className="hamburger-number">03</span>
+              <span className="hamburger-title">Students</span>
+            </Link>
+            <Link to="/">
+              <span className="hamburger-number">04</span>
+              <span className="hamburger-title">Contents</span>
+            </Link>
+            <Link to="/Guestbook">
+              <span className="hamburger-number">05</span>
+              <span className="hamburger-title">Guestbook</span>
+            </Link>
+            <Link to="/about">
+              <span className="hamburger-number">06</span>
+              <span className="hamburger-title">Credit</span>
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -92,7 +95,7 @@ const RootLayout = () => {
       <footer>
         <div className="LeftFooter">
           <Link to="/">
-            <img src="#" alt="Logo" />
+            <img src="/img/footerLogo.svg" alt="Logo" />
           </Link>
           <p>
             경기도 의왕시 계원대학로 66(내손동) 계원예술대학교 16038
