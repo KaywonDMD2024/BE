@@ -19,20 +19,20 @@ const RootLayout = () => {
   // Apply and remove overflow:hidden when menu is opened/closed
   useEffect(() => {
     if (menuOpen) {
-      document.body.style.overflow = 'hidden';
-      document.documentElement.style.overflow = 'hidden'; // Apply to html as well
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden"; // Apply to html as well
     } else {
-      document.body.style.overflow = 'auto';
-      document.documentElement.style.overflow = 'auto'; // Reset overflow
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto"; // Reset overflow
     }
 
     // Cleanup to reset the overflow when the component is unmounted
     return () => {
-      document.body.style.overflow = 'auto';
-      document.documentElement.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
     };
   }, [menuOpen]);
-  
+
   return (
     <div>
       {/* Header======================================== */}
@@ -44,8 +44,12 @@ const RootLayout = () => {
         </div>
 
         <div className="rightMenu">
-          <Link className="menuLink" to="/Projects">Projects</Link>
-          <Link className="menuLink" to="/Students">Students</Link>
+          <Link className="menuLink" to="/Projects">
+            Projects
+          </Link>
+          <Link className="menuLink" to="/Students">
+            Students
+          </Link>
 
           {/* 메뉴 버튼 */}
           <div
@@ -110,7 +114,7 @@ const RootLayout = () => {
           </p>
           <p>ⓒ 2024. Delight Insight BE[biː] All Rights Reserved. </p>
         </div>
-        
+
         <div className="RightFooter">
           <div className="LinkComponent">
             <Link to="/">
