@@ -17,7 +17,7 @@ const ClickerGame = () => {
     <div>
       <h1>
         {clickCount >= 30
-          ? "Groth is complete!"
+          ? "Growth is complete!"
           : clickCount >= 10
           ? "Need more click..."
           : "Click Me!"
