@@ -47,6 +47,17 @@ const ClickerGame = () => {
     }
   };
 
+  // 캐릭터 크기를 결정하는 함수
+  const getCharacterSize = () => {
+    if (clickCount >= 30) {
+      return 300; // 30번 클릭 후 크기
+    } else if (clickCount >= 10) {
+      return 200; // 10번 클릭 후 크기
+    } else {
+      return 100; // 초기 크기
+    }
+  };
+
   const getCurrentCharacter = () => {
     if (clickCount >= 30) {
       return finalCharacter; // 3단계(최종) 캐릭터
@@ -74,7 +85,11 @@ const ClickerGame = () => {
             alt="캐릭터"
             className="character"
             onClick={handleClick}
-            style={{ cursor: "pointer" }}
+            style={{ 
+              cursor: "pointer",
+              width: `${getCharacterSize()}px`, // 클릭 횟수에 따른 크기 변화
+              height: `${getCharacterSize()}px` // 클릭 횟수에 따른 크기 변화
+            }}
           />
         )}
         <p className="clickNum">Clicks: {clickCount}</p>
