@@ -1,0 +1,19 @@
+.contents {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+h1 {
+    font-size: 50px;
+}
+.character {
+    width: 300px;
+    height: auto;
+    margin: 50px 0;
+}
+.clickNum {
+    font-size: 35px;
+}
