@@ -119,10 +119,12 @@
    /* 너비 100% */
 }
 
-.leftList, .rightList {
+.leftList,
+.rightList {
    display: flex;
    flex-direction: column;
 }
+
 .leftList {
    margin-right: 250px;
 }
@@ -150,7 +152,7 @@
    margin: 0 100px;
    font-family: 'Pretendard-regular', sans-serif;
    font-weight: 400;
-   font-size: 20px;
+   font-size: 18px;
    line-height: 28px;
    border-top: solid 1px #000;
 }
