@@ -59,33 +59,35 @@ const RootLayout = () => {
 
           {/* 메뉴 목록 */}
           <div className={`dropdown-menu ${menuOpen ? "open" : ""}`}>
-            <div className="leftList">
-              <Link to="/Curriculum">
-                <span className="hamburger-number">01</span>
-                <span className="hamburger-title">Curriculum</span>
-              </Link>
-              <Link to="/Projects">
-                <span className="hamburger-number">02</span>
-                <span className="hamburger-title">Project</span>
-              </Link>
-              <Link to="/Students">
-                <span className="hamburger-number">03</span>
-                <span className="hamburger-title">Students</span>
-              </Link>
-            </div>
-            <div className="rightList">
-              <Link to="/">
-                <span className="hamburger-number">04</span>
-                <span className="hamburger-title">Contents</span>
-              </Link>
-              <Link to="/Guestbook">
-                <span className="hamburger-number">05</span>
-                <span className="hamburger-title">Guestbook</span>
-              </Link>
-              <Link to="/about">
-                <span className="hamburger-number">06</span>
-                <span className="hamburger-title">Credit</span>
-              </Link>
+            <div className="hamList">
+              <div className="leftList">
+                <Link to="/Curriculum">
+                  <span className="hamburger-number">01 </span>
+                  <span className="hamburger-title">Curriculum</span>
+                </Link>
+                <Link to="/Projects">
+                  <span className="hamburger-number">02 </span>
+                  <span className="hamburger-title">Project</span>
+                </Link>
+                <Link to="/Students">
+                  <span className="hamburger-number">03 </span>
+                  <span className="hamburger-title">Students</span>
+                </Link>
+              </div>
+              <div className="rightList">
+                <Link to="/">
+                  <span className="hamburger-number">04 </span>
+                  <span className="hamburger-title">Contents</span>
+                </Link>
+                <Link to="/Guestbook">
+                  <span className="hamburger-number">05 </span>
+                  <span className="hamburger-title">Guestbook</span>
+                </Link>
+                <Link to="/Credit">
+                  <span className="hamburger-number">06 </span>
+                  <span className="hamburger-title">Credit</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -101,7 +103,7 @@ const RootLayout = () => {
           <Link to="/">
             <img src="/img/footerLogo.svg" alt="Logo" />
           </Link>
-          <p>
+          <p className="address">
             경기도 의왕시 계원대학로 66(내손동) 계원예술대학교 16038
             <br />
             kaywondaehangno(Naeson-Dong), Uiwang-Si, Gyeonggi-DO, Korea
