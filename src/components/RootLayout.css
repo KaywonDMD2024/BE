@@ -263,6 +263,7 @@ body {
    }
 
    .LinkComponent {
+      margin-right: 2vw;
       display: flex;
       align-items: flex-end;
       justify-content: flex-end;
