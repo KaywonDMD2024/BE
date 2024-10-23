@@ -8,7 +8,9 @@ const AddStudent = ({ onStudentAdded }) => {
         profile_image: null,
         major: 'designer',
         portfoilo: '',
-        team_id: ''
+        team_id: '',
+        student_num: '',
+        rolling_b: ''
     });
 
     useEffect(() => {
@@ -31,6 +33,8 @@ const AddStudent = ({ onStudentAdded }) => {
             formData.append('major', newStudent.major);
             formData.append('portfoilo', newStudent.portfoilo);
             formData.append('team_id', newStudent.team_id);
+            formData.append('student_num', newStudent.student_num);
+            formData.append('rolling_b', newStudent.rolling_b);
 
             const newStudentRecord = await pb.collection('students').create(formData);
             
@@ -39,7 +43,7 @@ const AddStudent = ({ onStudentAdded }) => {
             });
             
             onStudentAdded(expandedNewStudent);
-            setNewStudent({ name: '', profile_image: null, major: 'designer', portfoilo: '', team_id: '' });
+            setNewStudent({ name: '', profile_image: null, major: 'designer', portfoilo: '', team_id: '', student_num:'', rolling_b: '' });
         } catch (error) {
             console.error("Error creating student:", error);
         }
@@ -93,6 +97,19 @@ const AddStudent = ({ onStudentAdded }) => {
                 value={newStudent.portfoilo}
                 onChange={handleInputChange}
             />
+            <input
+                type="text"
+                name="student_num"
+                placeholder="학번"
+                value={newStudent.student_num}
+                onChange={handleInputChange}
+            />
+            <textarea 
+            name="rolling_b"
+            placeholder="롤링인더비"
+            value={newStudent.rolling_b}
+            onChange={handleInputChange}
+                ></textarea>
             <select
                 name="team_id"
                 value={newStudent.team_id}
