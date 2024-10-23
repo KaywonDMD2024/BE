@@ -49,7 +49,7 @@ const RootLayout = () => {
           <Link className="menuLink" to="/Projects">
             Projects
           </Link>
-          <Link className="menuLink" to="/Students">
+          <Link className="menuLink studLink" to="/Students">
             Students
           </Link>
 
@@ -139,22 +139,22 @@ const RootLayout = () => {
               <img src="/img/footer/youtube.png" alt="Youtube" />
             </Link>
             <Link to="/">
-              <img src="/img/footer/blog.png" alt="Blog" />
+              <img className="blog_img" src="/img/footer/blog.png" alt="Blog" />
             </Link>
           </div>
           <div className="Contact">
             <table>
               <tr>
                 <td className="ContactTitle">Tell</td>
-                <td>031-424-7509</td>
+                <td className="ContactTxt">031-424-7509</td>
               </tr>
               <tr>
                 <td className="ContactTitle">Fax</td>
-                <td>01899-5823</td>
+                <td className="ContactTxt">01899-5823</td>
               </tr>
               <tr>
                 <td className="ContactTitle">E-MAIL</td>
-                <td>Kaywon@Kaywon.Ac.Kr</td>
+                <td className="ContactTxt">Kaywon@Kaywon.Ac.Kr</td>
               </tr>
             </table>
           </div>
