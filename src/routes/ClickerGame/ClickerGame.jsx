@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./style.css";
-// import "../styles/pretendard.css";
+import "./ClickerGame.css";
 import imgCharacter1 from "./assets/character-1.svg";
 import imgCharacter2 from "./assets/character-2.svg";
 import imgCharacter3 from "./assets/character-3.svg";
@@ -50,11 +49,11 @@ const ClickerGame = () => {
   // 캐릭터 크기를 결정하는 함수
   const getCharacterSize = () => {
     if (clickCount >= 30) {
-      return 300; // 30번 클릭 후 크기
+      return 350; // 30번 클릭 후 크기
     } else if (clickCount >= 10) {
-      return 200; // 10번 클릭 후 크기
+      return 250; // 10번 클릭 후 크기
     } else {
-      return 100; // 초기 크기
+      return 150; // 초기 크기
     }
   };
 
@@ -70,30 +69,38 @@ const ClickerGame = () => {
 
   return (
     <div>
-      <div className="contents">
-        <h1>
-          {clickCount >= 30
-            ? "Growth is complete!"
-            : clickCount >= 10
-            ? "Need more click..."
-            : "Click Me!"
-          }
-        </h1>
-        {initialCharacter && (
-          <img
-            src={getCurrentCharacter()} // 현재 상태에 따라 캐릭터 이미지 선택
-            alt="캐릭터"
-            className="character"
-            onClick={handleClick}
-            style={{ 
-              cursor: "pointer",
-              width: `${getCharacterSize()}px`, // 클릭 횟수에 따른 크기 변화
-              height: `${getCharacterSize()}px` // 클릭 횟수에 따른 크기 변화
-            }}
-          />
-        )}
-        <p className="clickNum">Clicks: {clickCount}</p>
-      </div>
+      <main>
+        <div className="contents">
+          <h1>
+            {clickCount >= 30
+              ? "Growth is complete!"
+              : clickCount >= 10
+              ? "Need more click..."
+              : "Click Me!"
+            }
+          </h1>
+          <div className="character">
+            <p className="clickTxt-left">Click Me!</p>
+            <div className="img_box">
+              {initialCharacter && (
+                <img
+                  src={getCurrentCharacter()} // 현재 상태에 따라 캐릭터 이미지 선택
+                  alt="캐릭터"
+                  className="character_img"
+                  onClick={handleClick}
+                  style={{ 
+                    cursor: "pointer",
+                    width: `${getCharacterSize()}px`, // 클릭 횟수에 따른 크기 변화
+                    height: `${getCharacterSize()}px` // 클릭 횟수에 따른 크기 변화
+                  }}
+                />
+              )}
+            </div>
+            <p className="clickTxt-right">Click Me!</p>
+          </div>
+          <p className="clickNum">{String(clickCount).padStart(2, '0')}</p> {/* 여기에서 두 자리로 표시 */}
+        </div>
+      </main>
     </div>
   );
 };

@@ -1,6 +1,10 @@
+@import url('../styles/pretendard.css'); /* pretendard.css */
+
+
 * {
    padding: 0;
    margin: 0;
+   font-family: 'Pretendard', sans-serif; /* 모든 페이지 pretendard 적용 */
 }
 body {
    padding: 0;
@@ -189,7 +193,6 @@ body {
 .ContactTitle {
    width: 6.09vw; /* 117px -> 약 6.09vw */
 }
-
 
 /* 모바일 화면용 스타일 (393px 이하) */
 @media screen and (max-width: 393px) {
