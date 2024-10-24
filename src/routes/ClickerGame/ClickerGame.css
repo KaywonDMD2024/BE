@@ -1,0 +1,46 @@
+main {
+    padding: 0;
+    margin: 0;
+}
+.contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    font-family: 'Pretendard-semiBold', sans-serif;
+    font-size: 48px;
+    line-height: 28px;
+    margin-top: 98px;
+    margin-bottom: 159px;
+}
+.character {
+    display: flex;
+}
+.character p {
+    font-family: 'Pretendard-medium', sans-serif;
+    font-size: 30px;
+    line-height: 42px;
+    opacity: .5;
+}
+.img_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clickTxt-left {
+    margin-top: 13px;
+    margin-right: 108px;
+}
+.clickTxt-right {
+    margin-top: 237px;
+    margin-left: 108px;
+}
+.clickNum {
+    font-family: 'Pretendard-medium', sans-serif;
+    font-size: 48px;
+    line-height: 28px;
+    margin-top: 98px;
+    margin-bottom: 140px;
+}
